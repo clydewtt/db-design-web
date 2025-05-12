@@ -1,0 +1,181 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Poppins:wght@600&display=swap');
+
+
+#root {
+  /* max-width: 1280px; */
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+h2 {
+  font-family: 'Poppins', sans-serif;
+  color: white;
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+
+}
+
+p {
+  color: white;
+}
+
+/* .logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+} */
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+
+/* MENU OVERLAY FADE */
+.menu-overlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  animation-duration: 0.3s;
+  animation-fill-mode: forwards;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.menu-overlay.fade-in {
+  animation-name: fadeIn;
+  pointer-events: auto;
+}
+
+.menu-overlay.fade-out {
+  animation-name: fadeOut;
+}
+
+/* MENU CONTENT */
+.menu-items {
+  color: white;
+  text-align: center;
+}
+
+.menu-items h2 {
+  font-weight: 300;
+  letter-spacing: 3px;
+  margin-bottom: 2rem;
+  font-size: 1.4rem;
+  opacity: 0;
+  animation: fadeUp 0.4s ease forwards;
+  animation-delay: 0.2s;
+}
+
+/* STAGGERED MENU ITEMS */
+.menu-items ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.menu-items li {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin: 1.5rem 0;
+  cursor: pointer;
+  position: relative;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeUp 0.4s ease forwards;
+}
+
+.menu-items li:nth-child(1) {
+  animation-delay: 0.4s;
+}
+.menu-items li:nth-child(2) {
+  animation-delay: 0.6s;
+}
+.menu-items li:nth-child(3) {
+  animation-delay: 0.8s;
+}
+.menu-items li:nth-child(4) {
+  animation-delay: 1s;
+}
+
+.menu-items li:nth-child(5) {
+  animation-delay: 1.2s;
+}
+
+
+.menu-items li:hover::after {
+  content: '';
+  display: block;
+  margin: 0 auto;
+  width: 50%;
+  padding-top: 4px;
+  border-bottom: 2px solid cyan;
+}
+
+/* FADE IN/OUT KEYFRAMES */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+/* MENU ITEM ANIMATION */
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.menu-items li.sign-out {
+  color: #ff4d4f;
+}
+
+.menu-items li.sign-out:hover::after {
+  border-bottom: 2px solid #ff4d4f;
+}

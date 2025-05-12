@@ -1,0 +1,85 @@
+.upload-container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    position: relative;
+    z-index: 1;
+  }
+  
+  .upload-container h1 {
+    margin-bottom: 30px;
+  }
+  
+  .upload-form {
+    display: flex;
+    flex-direction: row;
+    gap: 80px; // wider spacing between columns
+    justify-content: center;
+    align-items: flex-start;
+    width: 900px; // increase overall form width
+    max-width: 95vw;
+  }
+  
+  .image-upload {
+    width: 360px;
+    height: 360px;
+    background: #111;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    overflow: hidden;
+  }
+
+  
+  .upload-placeholder {
+    font-size: 60px;
+    color: #aaa;
+  }
+  
+  .image-upload img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .form-details {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    width: 400px;
+  }
+  
+  .form-details input,
+  .form-details textarea,
+  .form-details select {
+    background: rgba(255, 255, 255, 0.05);
+    border: none;
+    color: white;
+    padding: 15px;
+    font-size: 16px;
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+  }
+  
+  textarea {
+    resize: none;
+    height: 140px;
+  }
+  
+  .submit-btn {
+    margin-top: 30px;
+    padding: 15px 30px;
+    background: linear-gradient(to right, #00f5c6, #00e0ff);
+    border: none;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+    color: black;
+  }
+  
