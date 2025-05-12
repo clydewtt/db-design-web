@@ -1,0 +1,9 @@
+# env variables
+.env
+.env.development
+.env.production
+
+.venv/
+
+# Ignore __pychache__
+**/__pycache__/
